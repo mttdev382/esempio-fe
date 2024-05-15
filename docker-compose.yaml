@@ -1,6 +1,11 @@
 services:
   esempio-fe:
-    build: .
-    ports:
-      - "80:80"
-    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - frontend-dist:/app/dist
+      - nginx-config:/nginx-conf
+volumes:
+  frontend-dist:
+  nginx-config:
