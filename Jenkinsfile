@@ -20,11 +20,11 @@ pipeline {
     }
 
     post {
-        always {
+        //always {
             // Pulisci dopo la build
             // sh 'docker-compose down'
             // cleanWs()
-        }
+        //}
         success {
             // Notifiche o ulteriori passaggi in caso di successo
             echo 'Deployment successful!'
