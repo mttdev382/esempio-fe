@@ -4,8 +4,12 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - frontend-dist:/app/dist
-      - nginx-config:/nginx-conf
+      - frontend-dist:/app/nginx-sites
+      - nginx-config:/app/nginx-configurations
 volumes:
   frontend-dist:
+    name: frontend-dist
+    external: true
   nginx-config:
+    name: nginx-config
+    external: true
