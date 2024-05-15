@@ -22,8 +22,8 @@ pipeline {
     post {
         always {
             // Pulisci dopo la build
-            sh 'docker-compose down'
-            cleanWs()
+            // sh 'docker-compose down'
+            // cleanWs()
         }
         success {
             // Notifiche o ulteriori passaggi in caso di successo
