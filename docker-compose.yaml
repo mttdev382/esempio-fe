@@ -9,7 +9,5 @@ services:
 volumes:
   frontend-dist:
     name: frontend-dist
-    external: true
   nginx-config:
     name: nginx-config
-    external: true
