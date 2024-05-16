@@ -32,12 +32,12 @@ pipeline {
     }
 
     post {
-        always {
+        //always {
             // Pulisci dopo la build, garantendo che i servizi non rimangano in esecuzione inutilmente
-            sh 'docker-compose down'
+            //sh 'docker-compose down'
             // Pulisce la workspace per rimuovere eventuali file residui
-            cleanWs()
-        }
+            //cleanWs()
+        //}
         success {
             // Notifiche o ulteriori passaggi in caso di successo
             echo 'Deployment successful!'
