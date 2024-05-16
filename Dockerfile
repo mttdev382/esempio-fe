@@ -19,4 +19,4 @@ COPY --from=build /app/dist /app/dist
 COPY --from=nginx-config /nginx-configurations /app/nginx-config
 
 #CMD ["tail", "-f", "/dev/null"]
-CMD ["sh", "-c", "cp -f -v -r /app/dist/esempio-fe/browser/ /app/nginx-sites/esempio-fe && cp -f -v -r /app/nginx-config/esempio-fe.conf /app/nginx-configurations/esempio-fe.conf && sleep infinity"]
+CMD ["sh", "-c", "cp -rf /app/dist/esempio-fe/browser/ /app/nginx-sites/esempio-fe && cp -rf /app/nginx-config/esempio-fe.conf /app/nginx-configurations/esempio-fe.conf && sleep infinity"]
