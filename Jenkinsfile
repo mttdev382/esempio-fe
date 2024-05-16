@@ -25,7 +25,7 @@ pipeline {
             steps {
                 script {
                     // Usa Docker Compose per costruire e avviare i servizi con cache disabilitata per una build pulita
-                    sh 'docker-compose --verbose up --build --no-cache -d'
+                    sh 'docker-compose up --build -d'
                 }
             }
         }
